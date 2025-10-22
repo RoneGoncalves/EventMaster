@@ -1,0 +1,64 @@
+# ========================
+# Arquivos e pastas sensíveis
+# ========================
+
+# Configurações locais
+/vendor
+/files
+/tmp
+/app/output
+/app/config
+/app/database
+/nbproject
+/logs
+
+# Arquivo de variáveis de ambiente
+.env
+
+# Credenciais e chaves
+*.key
+*.pem
+*.crt
+*.env
+
+# ========================
+# Logs e cache
+# ========================
+*.log
+tmp/
+cache/
+storage/
+app/logs/
+vendor/twig/twig/cache/
+
+# ========================
+# Dependências
+# ========================
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+
+# ========================
+# Arquivos de IDE / Sistema
+# ========================
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ========================
+# Arquivos temporários
+# ========================
+*.bak
+*.tmp
+*.swp
+*.swo
+*.orig
+
+# ========================
+# Backups e uploads
+# ========================
+backup/
+uploads/
+public/uploads/
