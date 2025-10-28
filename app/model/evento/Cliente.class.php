@@ -14,5 +14,6 @@ class Cliente extends TRecord
 
         parent::addAttribute('nome');
         parent::addAttribute('email');
+        parent::addAttribute('whatsapp');
     }
 }
