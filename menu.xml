@@ -3,12 +3,20 @@
         <icon>fas:home fa-fw</icon>
         <menu>
              <menuitem label='Eventos'>
-                  <icon>fas:tachometer-alt fa-fw</icon>
+                  <icon>fas:file-code fa-fw</icon>
                   <action>EventoList</action>
             </menuitem>
             <menuitem label='Locações'>
-                  <icon>fas:tachometer-alt fa-fw</icon>
+                  <icon>fas:file-code fa-fw</icon>
                   <action>LocacaoList</action>
+            </menuitem>
+            <menuitem label='Artistas'>
+                  <icon>fas:file-code fa-fw</icon>
+                  <action>ArtistaList</action>
+            </menuitem>
+            <menuitem label='Clientes'>
+                  <icon>fas:file-code fa-fw</icon>
+                  <action>ClienteList</action>
             </menuitem>
         </menu>
     </menuitem>
