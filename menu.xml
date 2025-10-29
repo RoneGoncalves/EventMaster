@@ -6,6 +6,10 @@
                   <icon>fas:tachometer-alt fa-fw</icon>
                   <action>EventoList</action>
             </menuitem>
+            <menuitem label='Locações'>
+                  <icon>fas:tachometer-alt fa-fw</icon>
+                  <action>LocacaoList</action>
+            </menuitem>
         </menu>
     </menuitem>
     <menuitem label='_t{Administration}'>

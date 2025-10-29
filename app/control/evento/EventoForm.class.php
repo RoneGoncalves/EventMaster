@@ -69,7 +69,7 @@ class EventoForm extends TPage
         $this->form->addFields( [ new TLabel('Estimativa de Público', '12') ], [ $est_publico ],[],[] );
         $this->form->addFields( [ new TLabel('Público Efetivo', '12') ], [ $publico_efetivo ],[],[] );
         $this->form->addFields( [ new TLabel('Valor do Convite', '12') ], [ $valor_convite ],[],[] );
-        $this->form->addFields( [ new TLabel('Descrição', '12') ], [ $descricao ] );      
+        $this->form->addFields( [ new TLabel('Descrição', '12') ], [ $descricao ],[],[] );      
         $descricao->setSize('100%', 80);
         $prev_orcamento->setNumericMask(2, ',', '.');
         $valor_convite->setNumericMask(2, ',', '.');
