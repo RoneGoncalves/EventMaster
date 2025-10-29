@@ -84,7 +84,6 @@ class EventoForm extends TPage
 
         $container = new TVBox;
         $container->style = 'width: 100%';
-        // $container->add(new TXMLBreadCrumb('menu.xml',  'EventoList'));
         $container->add($this->form);
         
         parent::add($container);

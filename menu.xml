@@ -2,14 +2,6 @@
     <menuitem label='Event Master'>
         <icon>fas:home fa-fw</icon>
         <menu>
-             <menuitem label='Eventos'>
-                  <icon>fas:file-code fa-fw</icon>
-                  <action>EventoList</action>
-            </menuitem>
-            <menuitem label='Locações'>
-                  <icon>fas:file-code fa-fw</icon>
-                  <action>LocacaoList</action>
-            </menuitem>
             <menuitem label='Artistas'>
                   <icon>fas:file-code fa-fw</icon>
                   <action>ArtistaList</action>
@@ -17,6 +9,18 @@
             <menuitem label='Clientes'>
                   <icon>fas:file-code fa-fw</icon>
                   <action>ClienteList</action>
+            </menuitem>
+             <menuitem label='Eventos'>
+                  <icon>fas:file-code fa-fw</icon>
+                  <action>EventoList</action>
+            </menuitem>
+            <menuitem label='Fornecedores'>
+                  <icon>fas:file-code fa-fw</icon>
+                  <action>FornecedorList</action>
+            </menuitem>
+            <menuitem label='Locações'>
+                  <icon>fas:file-code fa-fw</icon>
+                  <action>LocacaoList</action>
             </menuitem>
         </menu>
     </menuitem>

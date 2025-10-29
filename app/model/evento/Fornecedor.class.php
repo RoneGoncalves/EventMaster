@@ -13,7 +13,7 @@ class Fornecedor extends TRecord
         parent::__construct($id, $callObjectLoad);
 
         parent::addAttribute('nome');
-        parent::addAttribute('cpfCnpj');
+        parent::addAttribute('cpf_cnpj');
         parent::addAttribute('email');
         parent::addAttribute('whatsapp');
     }
