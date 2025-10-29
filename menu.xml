@@ -10,7 +10,11 @@
                   <icon>fas:file-code fa-fw</icon>
                   <action>ClienteList</action>
             </menuitem>
-             <menuitem label='Eventos'>
+            <menuitem label='Compras'>
+                  <icon>fas:file-code fa-fw</icon>
+                  <action>CompraList</action>
+            </menuitem>
+            <menuitem label='Eventos'>
                   <icon>fas:file-code fa-fw</icon>
                   <action>EventoList</action>
             </menuitem>
@@ -21,6 +25,10 @@
             <menuitem label='Locações'>
                   <icon>fas:file-code fa-fw</icon>
                   <action>LocacaoList</action>
+            </menuitem>
+            <menuitem label='Vendas'>
+                  <icon>fas:file-code fa-fw</icon>
+                  <action>VendaList</action>
             </menuitem>
         </menu>
     </menuitem>
