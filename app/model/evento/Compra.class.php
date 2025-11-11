@@ -17,9 +17,6 @@ class Compra extends TRecord
 
         parent::addAttribute('id_evento');
         parent::addAttribute('id_fornecedor');
-        parent::addAttribute('produto');
-        parent::addAttribute('quantidade');
-        parent::addAttribute('valor');
     }
 
     public function set_evento(Evento $object)

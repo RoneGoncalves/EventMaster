@@ -16,7 +16,7 @@ class VendaList extends Adianti\Base\TStandardList
         // Configurações básicas
         parent::setDatabase('base');
         parent::setActiveRecord('Venda');
-        parent::setDefaultOrder('id', 'desc');
+        parent::setDefaultOrder('id', 'asc');
 
         // Campos usados nos filtros
         parent::addFilterField('id_cliente', '=', 'id_cliente');
@@ -62,7 +62,13 @@ class VendaList extends Adianti\Base\TStandardList
         $col_valor      = new TDataGridColumn('valor', 'Valor', 'center', 15);
 
         // Formata valor
-        $col_valor->setTransformer(fn($v) => number_format($v, 2, ',', '.'));
+        $col_valor->setTransformer(function ($v) {
+            if (is_numeric($v)) {
+                return number_format((float) $v, 2, ',', '.');
+            }
+            return $v ?? '';
+        });
+
 
         // Adiciona colunas
         $this->datagrid->addColumn($col_id);

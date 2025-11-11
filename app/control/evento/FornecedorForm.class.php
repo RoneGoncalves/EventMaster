@@ -15,18 +15,20 @@ class FornecedorForm extends TPage
         $this->form->setFormTitle('Cadastro de Fornecedor');
 
         // cria os campos
-        $id        = new THidden('id');
+        $id        = new TEntry('id');
         $nome      = new TEntry('nome');
         $cpf_cnpj   = new TEntry('cpf_cnpj');
         $email     = new TEntry('email');
         $whatsapp  = new TEntry('whatsapp');
 
+        $id->setEditable(FALSE);
+
         // adiciona os campos
-        $this->form->addFields([new TLabel('Nome')], [$nome]);
-        $this->form->addFields([new TLabel('CPF/CNPJ')], [$cpf_cnpj]);
-        $this->form->addFields([new TLabel('E-mail')], [$email]);
-        $this->form->addFields([new TLabel('WhatsApp')], [$whatsapp]);
-        $this->form->addFields([], [$id]);
+        $this->form->addFields([new TLabel('ID')], [$id],[],[]);
+        $this->form->addFields([new TLabel('Nome')], [$nome],[],[]);
+        $this->form->addFields([new TLabel('CPF/CNPJ')], [$cpf_cnpj],[],[]);
+        $this->form->addFields([new TLabel('E-mail')], [$email],[],[]);
+        $this->form->addFields([new TLabel('WhatsApp')], [$whatsapp],[],[]);
 
         // validações
         $nome->addValidation('Nome', new TRequiredValidator);

@@ -27,10 +27,10 @@ class ClienteForm extends TPage
         $id->setEditable(FALSE);
 
         // Adiciona os campos ao formulário
-        $this->form->addFields([new TLabel('ID', '12')], [$id]);
-        $this->form->addFields([new TLabel('Nome', '12')], [$nome]);
-        $this->form->addFields([new TLabel('Email', '12')], [$email]);
-        $this->form->addFields([new TLabel('WhatsApp', '12')], [$whatsapp]);
+        $this->form->addFields([new TLabel('ID', '12')], [$id],[],[]);
+        $this->form->addFields([new TLabel('Nome', '12')], [$nome],[],[]);
+        $this->form->addFields([new TLabel('Email', '12')], [$email],[],[]);
+        $this->form->addFields([new TLabel('WhatsApp', '12')], [$whatsapp],[],[]);
 
         // Ações
         $btnSave = $this->form->addAction(_t('Save'), new TAction([$this, 'onSave']), 'fa:floppy-o');

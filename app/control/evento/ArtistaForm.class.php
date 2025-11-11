@@ -31,12 +31,12 @@ class ArtistaForm extends TPage
         $descricao->setSize('100%', 80);
 
         // Adiciona campos ao formulário
-        $this->form->addFields([new TLabel('ID', '12')], [$id]);
-        $this->form->addFields([new TLabel('Nome', '12')], [$nome]);
-        $this->form->addFields([new TLabel('Email', '12')], [$email]);
-        $this->form->addFields([new TLabel('WhatsApp', '12')], [$whatsapp]);
-        $this->form->addFields([new TLabel('Cidade de Origem', '12')], [$cidade_origem]);
-        $this->form->addFields([new TLabel('Descrição', '12')], [$descricao]);
+        $this->form->addFields([new TLabel('ID', '12')], [$id],[],[]);
+        $this->form->addFields([new TLabel('Nome', '12')], [$nome],[],[]);
+        $this->form->addFields([new TLabel('Email', '12')], [$email],[],[]);
+        $this->form->addFields([new TLabel('WhatsApp', '12')], [$whatsapp],[],[]);
+        $this->form->addFields([new TLabel('Cidade de Origem', '12')], [$cidade_origem],[],[]);
+        $this->form->addFields([new TLabel('Descrição', '12')], [$descricao],[],[]);
 
         // Botões de ação
         $saveBtn = $this->form->addAction(_t('Save'), new TAction([$this, 'onSave']), 'fa:floppy-o');

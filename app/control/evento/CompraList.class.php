@@ -18,17 +18,12 @@ class CompraList extends Adianti\Base\TStandardList
         parent::setDefaultOrder('id', 'desc');
 
         // Campos usados para filtros
-        parent::addFilterField('produto', 'like', 'produto');
         parent::addFilterField('id_evento', '=', 'id_evento');
         parent::addFilterField('id_fornecedor', '=', 'id_fornecedor');
 
         // ===== FORMULÁRIO DE BUSCA =====
         $this->form = new BootstrapFormBuilder('form_search_compra');
         $this->form->setFormTitle('Compras');
-
-        // Campo produto
-        $produto = new TEntry('produto');
-        $produto->setSize('100%');
 
         // Campo evento (combobox ligado ao banco)
         $evento = new TDBCombo('id_evento', 'base', 'Evento', 'id', 'nome');
@@ -41,7 +36,6 @@ class CompraList extends Adianti\Base\TStandardList
         $fornecedor->setSize('100%');
 
         // Adiciona campos ao formulário
-        $this->form->addFields([new TLabel('Produto')], [$produto]);
         $this->form->addFields([new TLabel('Evento')], [$evento]);
         $this->form->addFields([new TLabel('Fornecedor')], [$fornecedor]);
 
@@ -62,20 +56,11 @@ class CompraList extends Adianti\Base\TStandardList
         $col_id         = new TDataGridColumn('id', 'ID', 'center', 10);
         $col_evento     = new TDataGridColumn('evento->nome', 'Evento', 'center', 20);
         $col_fornecedor = new TDataGridColumn('fornecedor->nome', 'Fornecedor', 'center', 20);
-        $col_produto    = new TDataGridColumn('produto', 'Produto', 'center', 20);
-        $col_qtd        = new TDataGridColumn('quantidade', 'Qtd', 'center', 10);
-        $col_valor      = new TDataGridColumn('valor', 'Valor', 'center', 15);
-
-        // Formata valores monetários
-        $col_valor->setTransformer(fn($v) => number_format($v, 2, ',', '.'));
 
         // Adiciona colunas
         $this->datagrid->addColumn($col_id);
         $this->datagrid->addColumn($col_evento);
         $this->datagrid->addColumn($col_fornecedor);
-        $this->datagrid->addColumn($col_produto);
-        $this->datagrid->addColumn($col_qtd);
-        $this->datagrid->addColumn($col_valor);
 
         // Ações
         $edit_action = new TDataGridAction(['CompraForm', 'onEdit']);
